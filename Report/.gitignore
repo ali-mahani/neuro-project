@@ -1,0 +1,5 @@
+# ignore latex byproducts
+*.aux
+*.synctex.gz
+*.log
+*.out
