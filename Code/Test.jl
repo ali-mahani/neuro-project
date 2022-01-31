@@ -29,7 +29,7 @@ cutspiketrains = []
 for i ∈ 1:271
     for j ∈ 1:length(TS_ON)
         indices = findall(x -> x > [[0.0]; TS_ON][j] && x < [[0.0]; TS_ON][j+1], spiketrains[i])
-        push!(cutspiketrains, [(i, spiketrains[i][n] - TS_ON[j]) for n ∈ indices]...)
+        push!(cutspiketrains, [(i, TS_ON[j] - spiketrains[i][n]) for n ∈ indices]...)
         next!(Prog)
     end
 end
