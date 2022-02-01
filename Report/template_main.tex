@@ -22,7 +22,9 @@
 %\affil[c]{Affiliation Three}
 
 % Please add here a significance statement to explain the relevance of your work
-\significancestatement{You are encouraged to submit a 120-word maximum statement about the significance of your paper written at a level understandable to an undergraduate educated scientist outside their field of speciality. The primary goal of the Significance Statement is to explain the relevance of the work in broad context to a broad readership. The Significance Statement appears in the paper itself and is required for all research papers in some journals.}
+\significancestatement{During this project we analyze the data from the motor cortex and find 
+which events are most effective on the change in neuron behavior. We expect it to be the 
+events correlated the macaque lifting its arm and we deduce that expectation to be correct.}
 
 % Please include corresponding author, author contribution and author declaration information
 \authorcontributions{Please provide details of author contributions here.}
@@ -48,7 +50,7 @@ monkey start lifting its (left) hand.
 
 % If your first paragraph (i.e. with the \dropcap) contains a list environment (quote, quotation, theorem, definition, enumerate, itemize...), the line after the list may have some extra indentation. If this is the case, add \parshape=0 to the end of the list environment.
 \dropcap{I}n this paper we have used the electrophysiological dataset recorded in motor cortex of two macaque monkey(N) during an instructed delayed reach-to-grasp task to create numerous plots. Meanwhile the data is recorded with a 10$ \times $10 electrode array. The area under control includes: central sulcus, M1, Premotor Cortex Dorsal (PMD) and Premotor Cortex Ventral (PMV). 96 electrodes out of 100 have the data we need.
-We'll be clarifying the type of the process, whether the neurons are sensitive to a particle event or not, studying the firing rate based on different events, and etc. \citep{dataset}
+We'll be clarifying the type of the process, whether the neurons are sensitive to a particle event or not, studying the firing rate based on different events, and etc. \cite{dataset}
 \section*{Behavioural Task}
 \paragraph*{}
 The task is done by Monkey (N) and recorded during the trials. TS$ \_ $ON set signals when the task begins. After 400 ms, the yellow LED turns on, a signal that the start of the trial (WS$ \_ $ON). CUE$ \_ $ON set is the representation of how the monkey should grasp the object; Whether it is a side grip (SG) and the two left LEDs turn on, or it's a precision grip (PG) and the two right LEDs turn on. After 300 ms CUE$ \_ $OFF happens and the LEDs turn off. During the following 1000 ms, if something out of order happens, the trial leads to an error; and if not, at GO$ \_ $ON set, signal to the monkey to move its hand and grip the object divides into two kinds: Low force (LF) and high force (HF). After some delay, depending on the monkey's own behaviour, SR$ \_ $ON signals the start of the monkey's hand's motion. If no error happens, it should hold on the object for 500 ms, and then it receives the reward (RW$ \_ $ON). At last, WS$ \_ $OFF signals the end of the trial. These events are saved as bit numbers in dataset.
@@ -63,10 +65,10 @@ We used the data associated with the neurons' spike trains and the events during
 \caption{The density of events in all the trials over time.}\label{fig:events}
 \end{SCfigure*}
 \section*{Results}
-Go over your analysis/experiments step by step and
-describe what is shown in each figure then make a case
-to go to the next analysis.\\
-
+According to the raster plot and the PSTH plot of the neurons, and noting the time of 
+events, we deduce that -------- is the most effective event in changing the behavior of the neurons in the motor cortex. Using the ISI distribution, we can observe that the distribution 
+follows an exponential rule, meaning that the neurons can modeled using the homogeneous Poisson 
+Process.
 
 \section*{Discussion}
 A stochastic process that generates a sequence of events, such as action
