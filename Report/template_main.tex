@@ -31,7 +31,7 @@ events correlated the macaque lifting its arm and we deduce that expectation to 
 \equalauthors{\textsuperscript{1}A.O.(Author One) and A.T. (Author Two) contributed equally to this work (remove if not applicable).}
 
 % Keywords are not mandatory, but authors are strongly encouraged to provide them. If provided, please include two to five keywords, separated by the pipe symbol, e.g:
-\keywords{Keyword 1 $|$ Keyword 2 $|$ Keyword 3 $|$ ...}
+\keywords{LFP $|$ PSTH $|$ Macaque $|$ Poisson Process}
 
 \begin{abstract}
 We use the data used in the "Reach to Grasp" experiment, taken using LFP from the Motor Cortex of a Macaque. We hypothesize that one event has a dominant role in changing the firing rate of
@@ -70,6 +70,10 @@ events, we deduce that -------- is the most effective event in changing the beha
 follows an exponential rule, meaning that the neurons can modeled using the homogeneous Poisson 
 Process.
 
+Then, we filtered the trials based on their types, and drew the raster plots in Figs \ref{fig:event_raster1} through \ref{fig:event_raster4}. Based on our comparison of these 4
+plots we understand that determining the force of the grip, has the most effect on the neuron 
+firing rates.
+
 \section*{Discussion}
 A stochastic process that generates a sequence of events, such as action
 potentials, is called a \textbf{point process}. If the probability of an event occurring at any given time doesn't depend at all on the preceding events , so that the events themselves are statistically independent, we have a \textbf{Poisson process}. The \textbf{Homogeneous Poisson process}, which we are involved with here, causes the Poisson distribution:
@@ -101,6 +105,29 @@ P\left[\tau \leq t_{i+1}-t_{i}<\tau+\Delta t\right]=r \Delta t \exp (-r \tau)\ \
 \caption{The ISI distribution for filtered data. The bin range is between 0 to 8000 indexes. The y-axis then became logarithmic to fit the exponential function.}\label{fig:isi}
 \end{SCfigure*}
 
+\begin{SCfigure*}[\sidecaptionrelwidth][t]
+	\centering
+	\includegraphics[width=12cm,height=11.4cm]{../Assets/Q7RasterPlot1.pdf}
+	\caption{Raster plot of all the PG\_LF trials}\label{fig:event_raster1}
+\end{SCfigure*}
+
+\begin{SCfigure*}[\sidecaptionrelwidth][t]
+	\centering
+	\includegraphics[width=12cm,height=11.4cm]{../Assets/Q7RasterPlot2.pdf}
+	\caption{Raster plot of all the PG\_HF trials}\label{fig:event_raster2}
+\end{SCfigure*}
+
+\begin{SCfigure*}[\sidecaptionrelwidth][t]
+	\centering
+	\includegraphics[width=12cm,height=11.4cm]{../Assets/Q7RasterPlot3.pdf}
+	\caption{Raster plot of all the SG\_LF trials}\label{fig:event_raster3}
+\end{SCfigure*}
+
+\begin{SCfigure*}[\sidecaptionrelwidth][t]
+	\centering
+	\includegraphics[width=12cm,height=11.4cm]{../Assets/Q7RasterPlot4.pdf}
+	\caption{Raster plot of all the SG\_HF trials}\label{fig:event_raster4}
+\end{SCfigure*}
 \section*{References}
 % Bibliography
 \bibliography{references}
