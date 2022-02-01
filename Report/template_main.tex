@@ -47,11 +47,21 @@ We'll be clarifying the type of the process, whether the neurons are sensitive t
 \section*{Behavioural Task}
 \paragraph*{}
 The task is done by Monkey (N) and recorded during the trials. TS$ \_ $ON set signals when the task begins. After 400 ms, the yellow LED turns on, a signal that the start of the trial (WS$ \_ $ON). CUE$ \_ $ON set is the representation of how the monkey should grasp the object; Whether it is a side grip (SG) and the two left LEDs turn on, or it's a precision grip (PG) and the two right LEDs turn on. After 300 ms CUE$ \_ $OFF happens and the LEDs turn off. During the following 1000 ms, if something out of order happens, the trial leads to an error; and if not, at GO$ \_ $ON set, signal to the monkey to move its hand and grip the object divides into two kinds: Low force (LF) and high force (HF). After some delay, depending on the monkey's own behaviour, SR$ \_ $ON signals the start of the monkey's hand's motion. If no error happens, it should hold on the object for 500 ms, and then it receives the reward (RW$ \_ $ON). At last, WS$ \_ $OFF signals the end of the trial. These events are saved as bit numbers in dataset. 
+
+\section*{Materials and Methods}
+\paragraph*{} 
+We used the data associated with the neurons' spike trains and the events during the trials. In order to have the raster plot, each trial has been separated from other trials, and its starting time shifted to zero. This way the behaviour of neurons can be seen during each trial. PSTH figure is the density of spikes over time, and is plotted with the same data sorting procedure (Fig. 2). Because the events were not altogether ordered and collected over time, showing the events as vertical line in Fig. 1 would cause unnecessary confusion. So, instead, a histogram of events for all the trials is provided, implementing which events have happened at which time during the trial (Fig. 3). The histogram plot of the ISI of all the trials is shown in Fig. 4. Of course, the trials are gone through a filter to eliminate the outlier data. 
+nd should not be used. 
+
+\begin{SCfigure*}[\sidecaptionrelwidth][H]
+\centering
+\includegraphics[width=12cm,height=11.4cm]{EvDist.pdf}
+\caption{The density of events in all the trials over time.}\label{fig:side}
+\end{SCfigure*}
 \section*{Results}
 Go over your analysis/experiments step by step and
 describe what is shown in each figure then make a case
 to go to the next analysis.\\
-
 
 
 \section*{Discussion}
@@ -76,35 +86,13 @@ and future directions.\\
 \includegraphics[width=12cm,height=11.4cm]{TotPSTHPlot.pdf}
 \caption{PSTH. Firing rates, shown under the raster plot , were constructed from the multiple trials by counting spikes within discrete time bins and averaging over trials.}\label{fig:side}
 \end{SCfigure*}
-\begin{SCfigure*}[\sidecaptionrelwidth][t]
-\centering
-\includegraphics[width=12cm,height=11.4cm]{EvDist.pdf}
-\caption{The density of events in all the trials over time.}\label{fig:side}
-\end{SCfigure*}
 
 \begin{SCfigure*}[\sidecaptionrelwidth][t]
 \centering
 \includegraphics[width=12cm,height=11.4cm]{isi_logfit.jpg}
-\caption{The density of events in all the trials over time.}\label{fig:side}
+\caption{The ISI distribution for filtered data. The bin size is between 0 to 8000 indexes. The y- axis then became logarithmic to fit the exponential function.}\label{fig:side}
 \end{SCfigure*}
 
-\section*{Materials and Methods}
-\paragraph*{} 
-We used the data associated with the neurons' spike trains and the events during the trials. In order to have the raster plot, each trial has been separated from other trials, and its starting time shifted to zero. This way the behaviour of neurons can be seen during each trial. PSTH figure is the density of spikes over time, and is plotted with the same data sorting procedure (Fig. 2). Because the events were not altogether ordered and collected over time, showing the events as vertical line in Fig. 1 would cause unnecessary confusion. So, instead, a histogram of events for all the trials is provided, implementing which events have happened at which time during the trial (Fig. 3).
-
-\subsection*{Manuscript Length}
-Less than ten pages using a two-column format.
-
-\subsection*{References}
-References should be cited in numerical order as they appear in text; this will be done automatically via bibtex, e.g. \cite{belkin2002using} and \cite{berard1994embedding,coifman2005geometric}. 
-
-\subsection*{Single column equations}
-
-You may use 1- or 2-column equations in your article, according to your preference.
-
-To allow an equation to span both columns, use the \verb|\begin{figure*}...\end{figure*}| environment mentioned above for figures.
-
-Note that the use of the \verb|widetext| environment for equations is not recommended, and should not be used. 
 
 \begin{figure*}[bt!]
 \begin{align*}
