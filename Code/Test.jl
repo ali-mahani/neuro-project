@@ -52,10 +52,10 @@ cut_TS_ON
 
 cut_WS_ON = []
 
-for i ∈ 1:length(TS_ON)-1
-    indices = findall(x -> x > TS_ON[i] && x < TS_ON[i+1], WS_ON)
+for i ∈ 1:length(TS_ON)
+    indices = findall(x -> x > [[0.0]; TS_ON][i] && x < [[0.0]; TS_ON][i+1], WS_ON)
     for j ∈ 1:271
-        push!(cut_WS_ON, [(j, WS_ON[n] - TS_ON[i]) for n ∈ indices]...)
+        push!(cut_WS_ON, [(j, TS_ON[i] - WS_ON[n]) for n ∈ indices]...)
     end
 end
 
@@ -65,10 +65,10 @@ cut_WS_ON
 
 cut_CUE_ON = []
 
-for i ∈ 1:length(TS_ON)-1
-    indices = findall(x -> x > TS_ON[i] && x < TS_ON[i+1], CUE_ON)
+for i ∈ 1:length(TS_ON)
+    indices = findall(x -> x > [[0.0]; TS_ON][i] && x < [[0.0]; TS_ON][i+1], CUE_ON)
     for j ∈ 1:271
-        push!(cut_CUE_ON, [(j, CUE_ON[n] - TS_ON[i]) for n ∈ indices]...)
+        push!(cut_CUE_ON, [(j, TS_ON[i] - CUE_ON[n]) for n ∈ indices]...)
     end
 end
 
@@ -78,10 +78,10 @@ cut_CUE_ON
 
 cut_CUE_OFF = []
 
-for i ∈ 1:length(TS_ON)-1
-    indices = findall(x -> x > TS_ON[i] && x < TS_ON[i+1], CUE_OFF)
+for i ∈ 1:length(TS_ON)
+    indices = findall(x -> x > [[0.0]; TS_ON][i] && x < [[0.0]; TS_ON][i+1], CUE_OFF)
     for j ∈ 1:271
-        push!(cut_CUE_OFF, [(j, CUE_OFF[n] - TS_ON[i]) for n ∈ indices]...)
+        push!(cut_CUE_OFF, [(j, TS_ON[i] - CUE_OFF[n]) for n ∈ indices]...)
     end
 end
 
@@ -91,10 +91,10 @@ cut_CUE_OFF
 
 cut_GO_ON = []
 
-for i ∈ 1:length(TS_ON)-1
-    indices = findall(x -> x > TS_ON[i] && x < TS_ON[i+1], GO_ON)
+for i ∈ 1:length(TS_ON)
+    indices = findall(x -> x > [[0.0]; TS_ON][i] && x < [[0.0]; TS_ON][i+1], GO_ON)
     for j ∈ 1:271
-        push!(cut_GO_ON, [(j, GO_ON[n] - TS_ON[i]) for n ∈ indices]...)
+        push!(cut_GO_ON, [(j, TS_ON[i] - GO_ON[n]) for n ∈ indices]...)
     end
 end
 
@@ -104,10 +104,10 @@ cut_GO_ON
 
 cut_CUE_OFF = []
 
-for i ∈ 1:length(TS_ON)-1
-    indices = findall(x -> x > TS_ON[i] && x < TS_ON[i+1], CUE_OFF)
+for i ∈ 1:length(TS_ON)
+    indices = findall(x -> x > [[0.0]; TS_ON][i] && x < [[0.0]; TS_ON][i+1], CUE_OFF)
     for j ∈ 1:271
-        push!(cut_CUE_OFF, [(j, CUE_OFF[n] - TS_ON[i]) for n ∈ indices]...)
+        push!(cut_CUE_OFF, [(j, TS_ON[i] - CUE_OFF[n]) for n ∈ indices]...)
     end
 end
 
@@ -117,10 +117,10 @@ cut_CUE_OFF
 
 cut_SR = []
 
-for i ∈ 1:length(TS_ON)-1
-    indices = findall(x -> x > TS_ON[i] && x < TS_ON[i+1], SR)
+for i ∈ 1:length(TS_ON)
+    indices = findall(x -> x > [[0.0]; TS_ON][i] && x < [[0.0]; TS_ON][i+1], SR)
     for j ∈ 1:271
-        push!(cut_SR, [(j, SR[n] - TS_ON[i]) for n ∈ indices]...)
+        push!(cut_SR, [(j, TS_ON[i] - SR[n]) for n ∈ indices]...)
     end
 end
 
@@ -130,10 +130,10 @@ cut_SR
 
 cut_RW_ON = []
 
-for i ∈ 1:length(TS_ON)-1
-    indices = findall(x -> x > TS_ON[i] && x < TS_ON[i+1], RW_ON)
+for i ∈ 1:length(TS_ON)
+    indices = findall(x -> x > [[0.0]; TS_ON][i] && x < [[0.0]; TS_ON][i+1], RW_ON)
     for j ∈ 1:271
-        push!(cut_RW_ON, [(j, RW_ON[n] - TS_ON[i]) for n ∈ indices]...)
+        push!(cut_RW_ON, [(j, TS_ON[i] - RW_ON[n]) for n ∈ indices]...)
     end
 end
 
@@ -143,10 +143,10 @@ cut_RW_ON
 
 cut_GO_RW_OFF = []
 
-for i ∈ 1:length(TS_ON)-1
-    indices = findall(x -> x > TS_ON[i] && x < TS_ON[i+1], GO_RW_OFF)
+for i ∈ 1:length(TS_ON)
+    indices = findall(x -> x > [[0.0]; TS_ON][i] && x < [[0.0]; TS_ON][i+1], GO_RW_OFF)
     for j ∈ 1:271
-        push!(cut_GO_RW_OFF, [(j, GO_RW_OFF[n] - TS_ON[i]) for n ∈ indices]...)
+        push!(cut_GO_RW_OFF, [(j, TS_ON[i] - GO_RW_OFF[n]) for n ∈ indices]...)
     end
 end
 
@@ -156,10 +156,10 @@ cut_GO_RW_OFF
 
 cut_STOP = []
 
-for i ∈ 1:length(TS_ON)-1
-    indices = findall(x -> x > TS_ON[i] && x < TS_ON[i+1], STOP)
+for i ∈ 1:length(TS_ON)
+    indices = findall(x -> x > [[0.0]; TS_ON][i] && x < [[0.0]; TS_ON][i+1], STOP)
     for j ∈ 1:271
-        push!(cut_STOP, [(j, STOP[n] - TS_ON[i]) for n ∈ indices]...)
+        push!(cut_STOP, [(j, TS_ON[i] - STOP[n]) for n ∈ indices]...)
     end
 end
 
