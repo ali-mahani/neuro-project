@@ -2,7 +2,9 @@
 % Use the lineno option to display guide line numbers if required.
 \usepackage{float}
 \usepackage{lipsum}
+\usepackage{amsmath}
 \usepackage{subcaption}
+\usepackage{romannum}
 \templatetype{twocolumn} % Choose template 
 % {pnasresearcharticle} = Template for a two-column research article
 % {pnasmathematics} %= Template for a one-column mathematics article
@@ -65,14 +67,17 @@ to go to the next analysis.\\
 
 
 \section*{Discussion}
-Should be at least three paragraphs: first paragraph says what
-was the main results you showed, second paragraph says
-what was the relationship of what you showed to what
-was previously shown in other papers and what might
-be the shortcomings of your approach, third paragraph
-gives a short summary of significance of what you found
-and future directions.\\
+A stochastic process that generates a sequence of events, such as action
+potentials, is called a \textbf{point process}. If the probability of an event occurring at any given time doesn't depend at all on the preceding events , so that the events themselves are statistically independent, we have a \textbf{Poisson process}. The \textbf{Homogeneous Poisson process}, which we are involved with here, causes the Poisson distribution: 
+\begin{gather*}
+P_{T}[n]=\frac{(r T)^{n}}{n !} \exp (-r T)\ \ \ \ (\Romannum{1})
+\end{gather*}
 
+The probability density of time intervals between adjacent spikes is called the interspike interval distribution (ISI), and it is a useful statistic for characterizing spiking patterns. From equation (\Romannum{1}), with n = 0, the probability of not firing a spike for period $ \tau $ is $ exp(-r\tau) $, so the probability of an interspike interval falling
+between $ \tau $ and $ \Delta t + \tau $ is: 
+\begin{gather*}
+P\left[\tau \leq t_{i+1}-t_{i}<\tau+\Delta t\right]=r \Delta t \exp (-r \tau)\ \ \ \ \Romannum{2}
+\end{gather*}
 (dummy text)\lipsum[1]
 
 
@@ -92,16 +97,6 @@ and future directions.\\
 \includegraphics[width=12cm,height=11.4cm]{isi_logfit.jpg}
 \caption{The ISI distribution for filtered data. The bin size is between 0 to 8000 indexes. The y- axis then became logarithmic to fit the exponential function.}\label{fig:side}
 \end{SCfigure*}
-
-
-\begin{figure*}[bt!]
-\begin{align*}
-(x+y)^3&=(x+y)(x+y)^2\\
-       &=(x+y)(x^2+2xy+y^2) \numberthis \label{eqn:example} \\
-       &=x^3+3x^2y+3xy^3+x^3. 
-\end{align*}
-\end{figure*}
-
 
 \section*{References}
 % Bibliography
